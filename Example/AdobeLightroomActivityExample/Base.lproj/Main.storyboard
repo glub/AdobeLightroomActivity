@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6JW-mq-XOF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKJ-M2-qOW">
+                                <rect key="frame" x="240" y="285" width="121" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dvz-jH-iMk"/>
+                                    <constraint firstAttribute="width" constant="121" id="kQ2-Fs-uLK"/>
+                                </constraints>
+                                <state key="normal" title="Export Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="exportSampleImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0z9-Ay-ZnY"/>
+                                </connections>
+                            </button>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="X2N-aj-qGm">
+                                <rect key="frame" x="158" y="343" width="285" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="285" id="O90-Td-3a5"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="X2N-aj-qGm" secondAttribute="centerX" constant="-0.5" id="6QV-T8-YzX"/>
+                            <constraint firstItem="X2N-aj-qGm" firstAttribute="top" secondItem="cKJ-M2-qOW" secondAttribute="top" constant="58" id="G3W-BR-Kkq"/>
+                            <constraint firstAttribute="centerX" secondItem="cKJ-M2-qOW" secondAttribute="centerX" constant="-0.5" id="pSd-U2-gCf"/>
+                            <constraint firstAttribute="centerY" secondItem="cKJ-M2-qOW" secondAttribute="centerY" id="wIt-xA-DOO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TJX-k6-Ib4"/>
+                    <connections>
+                        <outlet property="exportButton" destination="cKJ-M2-qOW" id="95e-0l-D36"/>
+                        <outlet property="progessBar" destination="X2N-aj-qGm" id="Hq5-AD-oWF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="1018"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eZm-zp-Udl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6JW-mq-XOF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PWb-zi-9i2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HsQ-52-ZRg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nX2-nu-wKF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="1018"/>
+        </scene>
+    </scenes>
+</document>

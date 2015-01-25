@@ -1,0 +1,1 @@
+Place the AdobeCreativeSDKFoundation.framework in this folder.
