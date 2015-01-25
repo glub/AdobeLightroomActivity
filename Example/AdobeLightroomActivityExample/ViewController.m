@@ -79,6 +79,7 @@
     [self.progessBar setHidden:YES];
     [self.progessBar setProgress:0.f];
     
+    // You need to set your client ID and secret you've been given from the Adobe Creative SDK here.
     ICAdobeLightroomActivity* lightroomActivity =
         [[ICAdobeLightroomActivity alloc] initWithClientID:@""
                                           withClientSecret:@""];
